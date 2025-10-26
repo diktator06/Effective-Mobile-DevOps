@@ -1,0 +1,15 @@
+[Unit]
+Description=Monitor Test Process
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/local/bin/monitor_test.sh
+StandardOutput=null
+StandardError=journal
+SyslogIdentifier=monitor-test
+
+[Install]
+WantedBy=multi-user.target
+

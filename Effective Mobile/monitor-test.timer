@@ -1,0 +1,12 @@
+[Unit]
+Description=Timer for Monitor Test Process
+After=network.target
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=monitor-test.service
+
+[Install]
+WantedBy=timers.target
+
